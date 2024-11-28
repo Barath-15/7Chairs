@@ -9,17 +9,25 @@
     <link rel="icon" href="https://github.com/Barath-15/Pass-the-salt/blob/main/faviconC.png?raw=true?" type="image/png" />
 
     <style>
-      /* Center all contents and make text slightly bold */
+       /* Ensure scrollable content and full height */
+      html, body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        font-weight: 500; /* Slightly bold */
+      }
+
+      /* Add padding for top and bottom and allow scrolling */
       body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        height: 100vh;
-        margin: 0;
-        font-family: Arial, sans-serif;
-        text-align: center;
-        font-weight: 500; /* Slightly bold */
+        justify-content: flex-start;
+        min-height: 100vh;
+        padding: 50px 0; /* Add top and bottom padding */
+        box-sizing: border-box;
+        overflow-y: auto; /* Enable scrolling */
       }
 
       /* Header styling for the first line */
@@ -63,6 +71,9 @@ line-height: 1.5;
       
        /* Responsive Design for Mobile View */
   @media (max-width: 768px) {
+     body {
+          padding: 80px 20px; /* Add extra padding for mobile view */
+        }
     h1 {
       font-size: 1.8em; /* Slightly smaller text for mobile */
       margin: 15px 0; /* Increase spacing for better readability */
